@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { CmeViewApprenantsComponent } from './views/cme-view-apprenants/cme-view-apprenants.component';
+import { ApprenantCardComponent } from './components/apprenants/apprenant-card/apprenant-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CmeViewApprenantsComponent,
+    ApprenantCardComponent
   ],
   imports: [
     BrowserModule,
