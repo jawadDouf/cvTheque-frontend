@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-apprenant-card',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./apprenant-card.component.css']
 })
 export class ApprenantCardComponent {
+
+  @Input() student:any;
+
+
+
+  ngOnInit(){
+    console.log(this.student);
+    
+  }
+  
 
 }
