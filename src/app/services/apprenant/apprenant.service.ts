@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApprenantService {
 
-  baseUrl:string = "http://localhost:8089/api/apprenant"
+  baseUrl:string = "http://localhost:8080/cv"
   constructor(private http:HttpClient) { }
 
 

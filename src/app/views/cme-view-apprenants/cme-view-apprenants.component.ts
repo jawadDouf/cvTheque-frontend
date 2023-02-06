@@ -7,7 +7,7 @@ import { ApprenantService } from 'src/app/services/apprenant/apprenant.service';
   styleUrls: ['./cme-view-apprenants.component.css']
 })
 export class CmeViewApprenantsComponent {
-   
+
   students:any;
 
   constructor(private apprenantService:ApprenantService){}
@@ -19,6 +19,7 @@ export class CmeViewApprenantsComponent {
   //get the students
   loadStudents(){
      return this.apprenantService.getApprenants().subscribe((res)=>{
+          console.log(res);
            this.students = res;
      })
   }
