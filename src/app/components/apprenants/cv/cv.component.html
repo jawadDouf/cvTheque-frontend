@@ -1,0 +1,48 @@
+<div class="w-full h-screen flex justify-center items-center">
+  <div class="w-1/2 h-[60vh] bg-gray-100 rounded-2xl ">
+    <header class="bg-gray-900 py-16 px-8 rounded-t-2xl flex gap-20 items-center">
+      <div class="w-32">
+        <img src="https://cutewallpaper.org/24/profile-png/transparent-confused-man-png-default-profile-png-download-transparent-png-image-pngitem.png" alt="">
+      </div>
+      <div>
+        <h1 class="text-3xl text-white font-bold">{{cv.apprenant.firstName}} {{cv.apprenant.lastName}}</h1>
+        <p class="text-white">{{cv.apprenant.speciality}}</p>
+      </div>
+    </header>
+    <section class="py-4 px-16">
+      <h2 class="text-2xl font-bold">Education</h2>
+      <ul class="list-disc">
+        <li *ngFor="let Education of cv.Educations">
+          <p class="text-lg font-bold">{{cv.formations.name}}</p>
+          <p class="text-gray-700">{{cv.formations.school}} | {{cv.formations.dateOfStart}} - {{cv.formations.dateOfEnd}}</p>
+        </li>
+      </ul>
+    </section>
+    <section class="py-4 px-16">
+      <h2 class="text-2xl font-bold">Work Experience</h2>
+      <ul class="list-disc">
+        <li>
+          <p class="text-lg font-bold">Web Developer</p>
+          <p class="text-gray-700">Company Name - Duration</p>
+          <p class="text-gray-700">Job Description</p>
+        </li>
+      </ul>
+    </section>
+    <section class="py-4 px-16">
+      <h2 class="text-2xl font-bold">Competences</h2>
+      <ul class="list-disc">
+        <li class="text-lg">HTML</li>
+        <li class="text-lg">CSS</li>
+        <li class="text-lg">JavaScript</li>
+      </ul>
+    </section>
+    <section class="pt-4 pb-8 px-16">
+      <h2 class="text-2xl font-bold">Languages</h2>
+      <ul class="list-disc">
+        <li *ngFor="let language of cv.languages">
+          <p ><span class="text-lg font-bold">{{language.name}}</span><span class="text-gray-700"> - {{language.niveau}}</span></p>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
