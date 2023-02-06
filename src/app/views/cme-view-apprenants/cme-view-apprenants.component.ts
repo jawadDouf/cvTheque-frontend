@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApprenantService } from 'src/app/services/apprenant/apprenant.service';
 
 @Component({
   selector: 'app-cme-view-apprenants',
@@ -7,7 +8,18 @@ import { Component } from '@angular/core';
 })
 export class CmeViewApprenantsComponent {
    
-  testArr:any = [1,2,3,4,5,6,21,12]
+  students:any;
 
+  constructor(private apprenantService:ApprenantService){}
 
+    ngOnInit(){
+      this.loadStudents();
+    }
+
+  //get the students
+  loadStudents(){
+     return this.apprenantService.getApprenants().subscribe((res)=>{
+           this.students = res;
+     })
+  }
 }
