@@ -10,6 +10,11 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { CmeViewApprenantsComponent } from './views/cme-view-apprenants/cme-view-apprenants.component';
 import { ApprenantCardComponent } from './components/apprenants/apprenant-card/apprenant-card.component';
 import { CorsInterceptorInterceptor } from './interceptors/cors-interceptor.interceptor';
+import { RouterModule, Routes } from '@angular/router';
+//Set up the router
+const appRouter: Routes = [
+  {path:'apprenants',component:CmeViewApprenantsComponent},
+]
 
 @NgModule({
   declarations: [
@@ -22,7 +27,8 @@ import { CorsInterceptorInterceptor } from './interceptors/cors-interceptor.inte
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRouter)
   ],
   providers: [
     {
