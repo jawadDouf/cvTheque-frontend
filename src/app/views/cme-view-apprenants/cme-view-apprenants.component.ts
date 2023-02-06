@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApprenantService } from 'src/app/services/apprenant/apprenant.service';
+import {CvComponent} from "../../components/apprenants/cv/cv.component";
 
 @Component({
   selector: 'app-cme-view-apprenants',
