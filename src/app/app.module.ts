@@ -12,9 +12,12 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ApprenantCardComponent } from './components/apprenants/apprenant-card/apprenant-card.component';
 import { FormsModule } from '@angular/forms';
+
+import { CvComponent } from './components/apprenants/cv/cv.component';
 //Set up the router
 const appRouter: Routes = [
   {path:'apprenants',component:CmeViewApprenantsComponent},
+  {path:'apprenants/cv/:id',component:CvComponent},
 ]
 
 @NgModule({
@@ -23,7 +26,8 @@ const appRouter: Routes = [
     NavbarComponent,
     FooterComponent,
     CmeViewApprenantsComponent,
-    ApprenantCardComponent
+    ApprenantCardComponent,
+    CvComponent
   ],
   imports: [
     BrowserModule,
